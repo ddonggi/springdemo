@@ -15,6 +15,7 @@ public class HelloController {
         linkedListPrac.printList();
         linkedListPrac.printLinkedList();
         linkedListPrac.printArrayList();
+        linkedListPrac.printQueueStack();
         return "hello";
     }
 

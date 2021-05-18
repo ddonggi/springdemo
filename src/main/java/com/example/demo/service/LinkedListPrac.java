@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class LinkedListPrac {
 
@@ -29,6 +30,8 @@ public class LinkedListPrac {
         Arrays.sort(array);
         System.out.println("sorted finish!!");
         System.out.println("sorted array : "+ Arrays.toString(array));
+        System.out.println("================== List ======================");
+        System.out.println();
     }
     public void printLinkedList() {
         LinkedList<String> strList = new LinkedList<>();
@@ -40,23 +43,25 @@ public class LinkedListPrac {
         strList.add("zip");
         strList.add("middle");
 
-        //for문 변경
-//        for(int x =0; x<strList.size(); x++){
+
+        //for문 변경 과정
+//        for(int x =0; x<strList.size(); x++){//인덱스 번호가 필요할 경우 쓰자
 //            System.out.println("elem"+(x+1)+" : "+strList.get(x));
 //        }
 
-//        for (String x : strList) { //인덱스 번호가 필요할 경우 쓰자
+//        for (String x : strList) { 
 //            System.out.println("Linked list element >> " + x);
 //        }
 
-        strList.forEach(x->System.out.println("Linked List element : "+x));
-//        strList.forEach(System.out::println);
+        strList.forEach(x->System.out.println("Linked List element : "+x)); //람다식
+//        strList.forEach(System.out::println); //메소드참조
 
         System.out.println("Linked list >>" + strList);
 //        strList.sort(String::compareTo);
         Collections.sort(strList);
         System.out.println("Sorted Linked list >>" + strList);
         System.out.println("================== linked list ======================");
+        System.out.println();
 
     }
 
@@ -68,7 +73,9 @@ public class LinkedListPrac {
 //        intList.sort(Integer::compareTo);
         Collections.sort(intList);
         System.out.println("Sorted Arraylist >>" + intList);
+
         System.out.println("================== Array list ======================");
+        System.out.println();
     }
 
     public void printTreeSet() {
@@ -81,5 +88,31 @@ public class LinkedListPrac {
         System.out.println("treeSet >> " + treeSet);
 
         System.out.println("================== Tree Set======================");
+        System.out.println();
+    }
+
+    public void printQueueStack(){
+        Queue<String> q = new LinkedList<>();
+        Stack<Integer> stack = new Stack<>();
+
+        q.offer("처음");
+        q.offer("둘");
+        q.offer("셋");
+        q.offer("넷");
+        q.offer("다섯");
+
+        stack.push(1);
+        stack.push(20);
+        stack.push(4);
+        stack.push(7);
+        stack.push(5);
+        while (!q.isEmpty()){
+            System.out.println("queue polling : "+q.poll());
+        }
+        while (!stack.isEmpty()){
+            System.out.println("stack pop"+stack.pop());
+        }
+        System.out.println("================== Queue, Stack ======================");
+        System.out.println();
     }
 }
