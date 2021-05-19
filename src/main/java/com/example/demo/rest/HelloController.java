@@ -1,29 +1,38 @@
 package com.example.demo.rest;
 
-import com.example.demo.service.LinkedListPrac;
+import com.example.demo.service.DataStructure;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HelloController {
-    LinkedListPrac linkedListPrac = new LinkedListPrac();
+    DataStructure dataStructure = new DataStructure();
 
     @GetMapping("/hello")
     public String Hello(Model model){
         model.addAttribute("data","hello");
-        linkedListPrac.printList();
-        linkedListPrac.printLinkedList();
-        linkedListPrac.printArrayList();
-        linkedListPrac.printQueueStack();
+        dataStructure.printList();
+        dataStructure.printLinkedList();
+        dataStructure.printArrayList();
+        dataStructure.printQueueStackBasic();
+        dataStructure.printTreeSet();
+        String expression = "((2+3)*1)+3";
+        dataStructure.printStack(expression);
+
         return "hello";
     }
 
     @GetMapping("/treeSet")
     public String treeSet(Model model){
         model.addAttribute("data","treeSet");
-        linkedListPrac.printTreeSet();
+        dataStructure.printTreeSet();
         return "treeSet";
     }
-
+    @GetMapping("/queue")
+    public String queue(Model model){
+        model.addAttribute("data","queue");
+        dataStructure.printQueue();
+        return "queue";
+    }
 }
