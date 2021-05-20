@@ -19,6 +19,7 @@ public class HelloController {
         dataStructure.printTreeSet();
         String expression = "((2+3)*1)+3";
         dataStructure.printStack(expression);
+        dataStructure.printIterator();
 
         return "hello";
     }

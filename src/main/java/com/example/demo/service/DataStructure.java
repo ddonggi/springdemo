@@ -156,6 +156,7 @@ public class DataStructure {
 
     static Queue<String> qu = new LinkedList<>();
     static final int MAX_SIZE = 5; //맥스 사이즈, 최근 5개 목록만 나오게
+
     public void printQueue() {
 //        Queue는 인터페이스, 인터페이스를 구현한 구현체는 대표적으로 링크드리스트
 
@@ -175,19 +176,19 @@ public class DataStructure {
                 } else if (input.equalsIgnoreCase("help")) {
                     System.out.println(" help - 도움말을 보여줍니다. ");
                     System.out.println(" Q (q) - 프로그램을 종료합니다. ");
-                    System.out.println(" history - 최근에 입력한 명령어를 "+MAX_SIZE+"개 보여줍니다.");
+                    System.out.println(" history - 최근에 입력한 명령어를 " + MAX_SIZE + "개 보여줍니다.");
 
-                } else if(input.equalsIgnoreCase("history")){
-                    save(input); //입력받은 명령어를 저장하고
+                } else if (input.equalsIgnoreCase("history")) {
+//                    save(input); //입력받은 명령어를 저장하고
                     //링크드 리스트의 내용을 보여준다.
-                    LinkedList list = (LinkedList)qu;
-                    for(int i =0; i<list.size(); i++)
-                        System.out.println((i+1)+"."+list.get(i));
+                    LinkedList list = (LinkedList) qu;
+                    for (int i = 0; i < list.size(); i++)
+                        System.out.println((i + 1) + "." + list.get(i));
 
-                    }else{
-                        save(input);
-                        System.out.println("input : "+input);
-                    }
+                } else {
+                    save(input);
+                    System.out.println("input : " + input);
+                }
 
             } catch (Exception e) {
                 System.out.println("입력오류 입니다");
@@ -198,10 +199,40 @@ public class DataStructure {
 
     private void save(String input) {
         //Queue에 저장한다.
-        if(!"".equals(input)){//빈문자열을 입력한게 아니라면
+        if (!"".equals(input)) {//빈문자열을 입력한게 아니라면
             qu.offer(input);
         }
-        if(qu.size()>MAX_SIZE)
+        if (qu.size() > MAX_SIZE)
             qu.remove();
+    }
+
+    public void printIterator(){
+        Collection<Integer> collection = new TreeSet<>();
+        collection.add(0);
+        collection.add(3);
+        collection.add(45);
+        collection.add(61);
+        collection.add(15);
+
+        Iterator<Integer> it = collection.iterator();
+
+        while (it.hasNext()){
+            Object obj = it.next();
+            System.out.println("list element : "+obj);
+        }
+
+        //위에서 다 읽었기때문에 다시 얻어와야 한다.
+        it = collection.iterator();
+
+        while (it.hasNext()){
+            Object obj = it.next();
+            System.out.println("list element : "+obj);
+        }
+
+        //for문으로도 할 수 있지만, 위의 List를 Set으로 바꾸게 되면 get 함수를 쓸 수 없다. 따라서 Iterator를 사용하면 위에만 바꿔주면 되고 , 사용하기 편하다.
+//        for(int i=0; i<collection.size(); i++){
+//            Object obj = collection.get(i);
+//            System.out.println("list element : "+obj);
+//        }
     }
 }
