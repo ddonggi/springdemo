@@ -20,7 +20,7 @@ public class HelloController {
         String expression = "((2+3)*1)+3";
         dataStructure.printStack(expression);
         dataStructure.printIterator();
-
+        dataStructure.printArrays();
         return "hello";
     }
 

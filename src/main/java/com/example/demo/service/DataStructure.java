@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.awt.List;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -78,7 +79,6 @@ public class DataStructure {
 //        intList.sort(Integer::compareTo);
         Collections.sort(intList);
         System.out.println("Collections.sort(intList) Sorted Arraylist >>" + intList);
-
 
     }
 
@@ -228,11 +228,73 @@ public class DataStructure {
             Object obj = it.next();
             System.out.println("list element : "+obj);
         }
-
         //for문으로도 할 수 있지만, 위의 List를 Set으로 바꾸게 되면 get 함수를 쓸 수 없다. 따라서 Iterator를 사용하면 위에만 바꿔주면 되고 , 사용하기 편하다.
 //        for(int i=0; i<collection.size(); i++){
 //            Object obj = collection.get(i);
 //            System.out.println("list element : "+obj);
 //        }
+    }
+
+    public void printArrays(){
+        /*
+        * Arrays는 배열을 다루는데 유용한 메서드가 정의되어 있다.
+        */
+
+        int[] arr1 = {1,5,33,52,7};
+
+        //copyOf()는 배열 전체를 복사해서 새로운 배열을 만들어 반환한다. 길이 지정이 가능하다, 기존 배열보다 길면 0으로 채워진다.
+        int[] arr2 = Arrays.copyOf(arr1,3);
+        int[] arr3 = Arrays.copyOf(arr1,arr1.length);
+        int[] arr4 = Arrays.copyOf(arr1,7);
+        //copyOfRange 는 시작점을 지정할수있다.
+        int[] arr5 = Arrays.copyOfRange(arr1,2,7); //7번째 인덱스는 포함되지 않는다. 즉 2번째 인덱스 부터 6번째 인덱스까지만
+        int[] arr6 = Arrays.copyOfRange(arr1,0,7);
+
+        Arrays.sort(arr1);
+
+        System.out.println("arr1 : "+ Arrays.toString(arr1));
+        System.out.println("arr1 : "+ Arrays.toString(arr2));
+        System.out.println("arr1 : "+ Arrays.toString(arr3));
+        System.out.println("arr1 : "+ Arrays.toString(arr4));
+        System.out.println("arr1 : "+ Arrays.toString(arr5));
+        System.out.println("arr1 : "+ Arrays.toString(arr6));
+
+        //fill(), setAll()
+        int[] emptyArr = {3,4,5,6};
+        System.out.println("emptyArr: "+ Arrays.toString(emptyArr));
+
+        Arrays.fill(emptyArr,1);//fill() 은 배열의 모든 요소를 지정된된 값으로 채운다.
+        System.out.println("filled arr : "+ Arrays.toString(emptyArr));
+
+        Arrays.setAll(arr1, i->(int)(Math.random()*5)+1); // 함수형 인터페이스를 매개변수로 받아 배열을 채운다.
+
+        //Binary Search 해당 key의 index 값을 찾아서 반환한다. *꼭 정렬된 상태여야한다
+        int[] arr = {3,10,8,1,5};
+        System.out.println("arr : "+Arrays.toString(arr));
+        int idx = Arrays.binarySearch(arr,5);
+        System.out.println("idx : "+idx);
+
+        Arrays.sort(arr); //정렬 후
+        System.out.println("arr : "+Arrays.toString(arr));
+        int idx2 = Arrays.binarySearch(arr,5);
+        System.out.println("idx : "+idx2);
+
+        //equals(), toString(), deppEquals(), deppToString()
+        int[] array = {0,1,2,3,4};
+        int[] array2 = {0,1,2,3,4};
+        int[][] arr2D={{2,4},{1,6}};
+        int[][] arr2D2={{2,4},{1,6}};
+
+        boolean equals = Arrays.equals(array, array2);
+        boolean equals2D = Arrays.deepEquals(arr2D,arr2D2);
+
+
+        if(equals){
+            System.out.println( "arr[]1, arr[]2 is equal");
+        }
+        if(equals2D){
+            System.out.println( "arr[][]1, [][]2 is equal");
+        }
+        System.out.println("arr2D : "+Arrays.deepToString(arr2D));
     }
 }
