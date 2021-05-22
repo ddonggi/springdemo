@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import java.awt.List;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -296,5 +295,16 @@ public class DataStructure {
             System.out.println( "arr[][]1, [][]2 is equal");
         }
         System.out.println("arr2D : "+Arrays.deepToString(arr2D));
+
+        //배열을 List로 반환
+        Integer[] arr_a = {3,4,5,6};
+        List list = Arrays.asList(arr_a);
+        System.out.println("list : "+ list);
+
+        List list2 = Arrays.asList(3,4,5,6); // 길이가 정해져서 add 추가 를 할 수 없다.
+        list2 = new ArrayList(Arrays.asList(3,4,5,6)); //new Arraylist 에 담아주면 가변길이로 사용할 수 있다.
+        list2.add(7);
+
+        System.out.println("list2 : "+list2);
     }
 }
