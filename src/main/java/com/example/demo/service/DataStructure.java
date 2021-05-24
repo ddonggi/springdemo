@@ -309,7 +309,7 @@ public class DataStructure {
     }
 
     public void printComparable(){
-    //정렬 기준을 제공하는것이 목적, 객체 정렬에 필요한 메서드를 정의한 인터페이스
+    //'정렬 기준'을 제공하는것이 목적, '객체' 정렬에 필요한 메서드를 정의한 인터페이스
         //Comparable 기본(default)정렬(sort)기준을 구현하는데 사용
         // compareTo 주어진 객체를 자신과 비교
         //결과가 같으면 0, 오른쪽이 크면 음수 -, 왼쪽이크면 양수 +
@@ -321,7 +321,23 @@ public class DataStructure {
 
         String[] strArr = {"cat","Dog","lion","tiger"};
         Arrays.sort(strArr);
-        System.out.println("strArray : "+strArr);// 대문자,소문자 순 정렬 후 알파벳 순
+        System.out.println("strArray : "+ Arrays.toString(strArr));// 대문자,소문자 순 정렬 후 알파벳 순
 
+        Arrays.sort(strArr,String.CASE_INSENSITIVE_ORDER);//대소문자 구분 안함
+        System.out.println("strArray ignoreCase : "+ Arrays.toString(strArr));
+        Arrays.sort(strArr,new Descending());
+        System.out.println("strArray Descending : "+ Arrays.toString(strArr));
+    }
+    public class Descending implements Comparator{
+
+        @Override
+        public int compare(Object o1, Object o2) {
+            if(o1 instanceof Comparable && o2 instanceof Comparable) {
+                Comparable c1 = (Comparable)o1;
+                Comparable c2 = (Comparable)o2;
+                return c1.compareTo(c2)*-1; // -1을 곱해서 역방향으로 변경
+            }
+            return -1;
+        }
     }
 }

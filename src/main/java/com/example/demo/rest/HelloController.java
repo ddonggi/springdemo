@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloController {
     DataStructure dataStructure = new DataStructure();
-
+    @GetMapping("/comparable")
+    public String comparable(Model model){
+        model.addAttribute("data","comparable");
+        dataStructure.printComparable();
+        return "hello";
+    }
     @GetMapping("/hello")
     public String Hello(Model model){
         model.addAttribute("data","hello");
