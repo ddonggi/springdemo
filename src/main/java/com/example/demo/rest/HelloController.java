@@ -14,6 +14,7 @@ public class HelloController {
         dataStructure.printComparable();
         return "hello";
     }
+
     @GetMapping("/hello")
     public String Hello(Model model){
         model.addAttribute("data","hello");
@@ -40,5 +41,23 @@ public class HelloController {
         model.addAttribute("data","queue");
         dataStructure.printQueue();
         return "queue";
+    }
+    @GetMapping("/success")
+    public String success(Model model){
+        System.out.println("success!!!");
+        return "filtered";
+    }
+
+    @GetMapping("/filtered/success")
+    public String filteredSuccess(Model model){
+        System.out.println("filtered success!!!");
+        return "filtered";
+    }
+
+    @GetMapping("/filtered/hello")
+    public String filteredHello(Model model){
+        System.out.println("hello filter");
+        dataStructure.printArrays();
+        return "hello";
     }
 }
