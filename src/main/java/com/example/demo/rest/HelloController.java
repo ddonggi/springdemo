@@ -30,12 +30,14 @@ public class HelloController {
         return "hello";
     }
 
-    @GetMapping("/treeSet")
+    @GetMapping("/set")
     public String treeSet(Model model){
         model.addAttribute("data","treeSet");
         dataStructure.printTreeSet();
-        return "treeSet";
+        dataStructure.printHashSet();
+        return "set";
     }
+
     @GetMapping("/queue")
     public String queue(Model model){
         model.addAttribute("data","queue");

@@ -81,8 +81,25 @@ public class DataStructure {
 
     }
 
+    public void printHashSet() {
+        System.out.println("================== Hash Set======================");
+        /*
+         *  Set Interface 구현, 순서유지x, 중복허용x
+         *  set 이 필요할 경우 HashSet을 일반적으로 쓴다.
+         *  순서를 유지하고 싶으면 LinkedHashSet 클래스를 사용하면 된다
+         */
+        System.out.println();
+
+        Set<Integer> linkedSet = new LinkedHashSet<>();
+    }
+
     public void printTreeSet() {
         System.out.println("================== Tree Set======================");
+        /*
+         *  Set Interface 구현, 순서유지x, 중복허용x
+         *  범위검색과 정렬에 유리한 컬렉션 클래스
+         *  HashSet보다 데이터 추가,삭제에 시간이 더 걸림
+         */
         System.out.println();
         TreeSet<Integer> treeSet = new TreeSet<>();
         treeSet.add(7);
@@ -95,6 +112,8 @@ public class DataStructure {
 
 
     }
+
+
 
     public void printQueueStackBasic() {
         System.out.println("================== Queue, Stack ======================");
@@ -328,6 +347,9 @@ public class DataStructure {
         Arrays.sort(strArr,new Descending());
         System.out.println("strArray Descending : "+ Arrays.toString(strArr));
     }
+
+
+
     public class Descending implements Comparator{
 
         @Override
