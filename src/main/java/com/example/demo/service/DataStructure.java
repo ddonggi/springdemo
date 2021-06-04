@@ -90,7 +90,18 @@ public class DataStructure {
          */
         System.out.println();
 
-        Set<Integer> linkedSet = new LinkedHashSet<>();
+//        Set<Integer> linkedSet = new LinkedHashSet<>();
+        Object[] objArr = {"1",new Integer(1),"2","2","3","3","4","4","4"};
+        Set set = new HashSet();
+        for(Object obj:objArr) {
+            set.add(obj);
+        }
+        Iterator iterator = set.iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
     }
 
     public void printTreeSet() {
