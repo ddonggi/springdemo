@@ -90,17 +90,49 @@ public class DataStructure {
          */
         System.out.println();
 
+        //-------------예제 1 --------------------------
 //        Set<Integer> linkedSet = new LinkedHashSet<>();
-        Object[] objArr = {"1",new Integer(1),"2","2","3","3","4","4","4"};
+        Object[] objArr = {"1",new Integer(1),"2","2","3","3","4","4","4"}; //중복을 제거
         Set set = new HashSet();
         for(Object obj:objArr) {
             set.add(obj);
         }
+        //HashSet에 저장된 요소들을 출력한다.
+        System.out.println("set : "+set);
+
         Iterator iterator = set.iterator();
 
+        //HashSet에 저장된 요소들을 출력한다. ( Iterator 이용 )
         while (iterator.hasNext()){
-            System.out.println(iterator.next());
+            System.out.println("iterator :"+iterator.next());
+        }//결과는 11234 이고, 저장순서를 저장하지 않기 때문에 1과 1 중에 어떤것이 문자열이고 정수 1인지 모른다
+
+
+        //---------------------예제 2 ---------------------
+        Set hashSet2 = new HashSet();
+        Random random = new Random();
+        int lottoNum;
+        //set의 크기가 6보다 작은 동안 1~45 사이의 난수를 저장
+        for(int i =0; hashSet2.size()<6; i++){
+            lottoNum = random.nextInt(45)+1;
+            hashSet2.add(lottoNum);
         }
+        iterator = hashSet2.iterator();
+        System.out.println("random num set :"+hashSet2);
+        while (iterator.hasNext()){
+            System.out.println("rand iter : "+iterator.next());
+        }
+        //list에 담아서 정렬
+        List list = new LinkedList(hashSet2);
+        System.out.println("list : "+list);
+        Collections.sort(list); //정렬이기때문에 set은 sort의 매개변수로 올 수 없다. set을 list로 옮기고 정렬
+        System.out.println("sorted list : "+list);
+
+        //------------------예제 3----------------------
+        //HashSet은 객체를 저장하기 전에 기존에 같은 객체가 있는지 확인한다. 있으면 저장x
+        // boolean add(Object o) 는 저장할 객체의 equals() 와 hashCode()를 호출
+        // HashSet이 정상작동(중복을 확인)하려면 equals()와 hashCode()가 오버라이딩 되어 있어야 함
+        // 클래스를 작성할때 자동완성에서 equals() 와 HashCode() 를 같이 generate 해주면 된다.
 
     }
 
