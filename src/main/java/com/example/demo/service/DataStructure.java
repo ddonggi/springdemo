@@ -134,6 +134,43 @@ public class DataStructure {
         // HashSet이 정상작동(중복을 확인)하려면 equals()와 hashCode()가 오버라이딩 되어 있어야 함
         // 클래스를 작성할때 자동완성에서 equals() 와 HashCode() 를 같이 generate 해주면 된다.
 
+        HashSet set3 = new HashSet();
+
+        set.add("abc");
+        set.add("abc"); //중복은 저장안됨
+        set.add(new Person("David",10));
+        set.add(new Person("David",10));
+    }
+
+    public class Person{
+        String name;
+        int age;
+
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Person person = (Person) o;
+            return age == person.age && Objects.equals(name, person.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name, age);
+        }
     }
 
     public void printTreeSet() {
