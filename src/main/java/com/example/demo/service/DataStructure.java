@@ -161,10 +161,15 @@ public class DataStructure {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Person person = (Person) o;
-            return age == person.age && Objects.equals(name, person.name);
+//            if (this == o) return true;
+//            if (o == null || getClass() != o.getClass()) return false;
+//            Person person = (Person) o;
+//            return age == person.age && Objects.equals(name, person.name);
+            if(!(o instanceof Person))return false;
+
+            Person p = (Person) o;
+            //나 자신의 이름과 나이를 p와 비교
+            return this.name.equals(p.name)&&this.age==p.age;
         }
 
         @Override
