@@ -140,6 +140,14 @@ public class DataStructure {
         set.add("abc"); //중복은 저장안됨
         set.add(new Person("David",10));
         set.add(new Person("David",10));
+
+        System.out.println("set : "+set);
+
+        HashSet setA = new HashSet();
+        HashSet setB = new HashSet();
+        HashSet setHab = new HashSet();
+        HashSet setKyo = new HashSet();
+        HashSet setCha = new HashSet();
     }
 
     public class Person{
