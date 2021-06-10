@@ -170,6 +170,18 @@ public class DataStructure {
             if(setA.contains("tmp"))
                 setKyo.add(tmp);
         }
+
+        iter = setA.iterator();
+        while (iter.hasNext())
+            setHab.add(iter.next());
+
+        iter = setB.iterator();
+        while (iter.hasNext())
+            setHab.add(iterator.next());
+
+        System.out.println("A 교집합 B = "+ setKyo);
+        System.out.println("A 합집합 B = "+ setHab);
+
     }
 
     public class Person{
