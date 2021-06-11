@@ -167,14 +167,14 @@ public class DataStructure {
         Iterator iter = setB.iterator();
         while (iter.hasNext()){//교집합
             Object tmp = iter.next();
-            if(setA.contains("tmp"))
+            if(setA.contains(tmp))
                 setKyo.add(tmp);
         }
 
         iter = setA.iterator();
-        while (iter.hasNext()){//교집합
+        while (iter.hasNext()){//차집합
             Object tmp = iter.next();
-            if(!setB.contains("tmp"))
+            if(!setB.contains(tmp))
                 setCha.add(tmp);
         }
 
