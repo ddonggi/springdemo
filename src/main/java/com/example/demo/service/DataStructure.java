@@ -172,12 +172,19 @@ public class DataStructure {
         }
 
         iter = setA.iterator();
+        while (iter.hasNext()){//교집합
+            Object tmp = iter.next();
+            if(!setB.contains("tmp"))
+                setCha.add(tmp);
+        }
+
+        iter = setA.iterator();
         while (iter.hasNext())
             setHab.add(iter.next());
 
         iter = setB.iterator();
         while (iter.hasNext())
-            setHab.add(iterator.next());
+            setHab.add(iter.next());
 
         System.out.println("A 교집합 B = "+ setKyo);
         System.out.println("A 합집합 B = "+ setHab);
