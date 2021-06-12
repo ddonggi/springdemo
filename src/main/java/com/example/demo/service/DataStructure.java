@@ -244,6 +244,19 @@ public class DataStructure {
 
         System.out.println("treeSet >> " + treeSet);
 
+        //이진탐색트리(Binary search tree)로 구현.범위탐색과 정렬에 유리
+        //이진트리는 모든 노드가 최대 2개의 하위 노드를 갖음
+        //각 요소(node)가 나무(tree)형태로 연결(linked list의 변형)
+        //이진 탐색 트리 - 부모보다 작은 값은 왼쪽 큰 값은 오른쪽에 저장
+        //데이터가 많아질수록 추가, 삭제에 시간이 더 걸림(비교 횟수 증가)
+        Set set = new TreeSet(); // 범위검색, 정렬. 정렬 필요없음 HashSet은 Linked list에 담은 후 sort
+
+        for(int i =0; set.size() <6; i++){
+            int num = (int)(Math.random()*45)+1;
+            set.add(num);
+        }
+
+        System.out.println(set);
 
     }
 
