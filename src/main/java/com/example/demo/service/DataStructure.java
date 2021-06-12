@@ -249,18 +249,30 @@ public class DataStructure {
         //각 요소(node)가 나무(tree)형태로 연결(linked list의 변형)
         //이진 탐색 트리 - 부모보다 작은 값은 왼쪽 큰 값은 오른쪽에 저장
         //데이터가 많아질수록 추가, 삭제에 시간이 더 걸림(비교 횟수 증가)
-        Set set = new TreeSet(); // 범위검색, 정렬. 정렬 필요없음 HashSet은 Linked list에 담은 후 sort
+        Set set = new TreeSet(new TestComp()); // 범위검색, 정렬. 정렬안해도 됨. HashSet은 Linked list에 담은 후 sort
 
-        for(int i =0; set.size() <6; i++){
-            int num = (int)(Math.random()*45)+1;
-            set.add(num);
-        }
+//        for(int i =0; set.size() <6; i++){
+//            int num = (int)(Math.random()*45)+1;
+            set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
+            set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
+            set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
+            set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
+//        }
+
+
 
         System.out.println(set);
 
     }
+    class TreeSetTest {}
 
+    class TestComp implements Comparator{
 
+        @Override
+        public int compare(Object o1, Object o2) {
+            return 0;
+        }
+    }
 
     public void printQueueStackBasic() {
         System.out.println("================== Queue, Stack ======================");
