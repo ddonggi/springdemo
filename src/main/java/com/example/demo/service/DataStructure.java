@@ -263,6 +263,29 @@ public class DataStructure {
 
         System.out.println(set);
 
+        TreeSet stringSet = new TreeSet();
+
+        String from = "b";
+        String to = "d";
+
+        stringSet.add("abc");
+        stringSet.add("alien");
+        stringSet.add("bat");
+        stringSet.add("car");
+        stringSet.add("Car");
+        stringSet.add("disc");
+        stringSet.add("dance");
+        stringSet.add("dZZZZ");
+        stringSet.add("dZZZZ");
+        stringSet.add("elephant");
+        stringSet.add("elevator");
+        stringSet.add("fan");
+        stringSet.add("flower");
+
+        System.out.println(stringSet);
+        System.out.println("range search : from"+from+"to"+to);
+        System.out.println("result 1 : "+stringSet.subSet(from,to));
+        System.out.println("result 2 : "+stringSet.subSet(from,to+"zzz"));
     }
     class TreeSetTest {}
 
