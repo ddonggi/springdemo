@@ -284,8 +284,20 @@ public class DataStructure {
 
         System.out.println(stringSet);
         System.out.println("range search : from"+from+"to"+to);
-        System.out.println("result 1 : "+stringSet.subSet(from,to));
-        System.out.println("result 2 : "+stringSet.subSet(from,to+"zzz"));
+//        System.out.println("result 1 : "+stringSet.subSet(from,to));
+//        System.out.println("result 2 : "+stringSet.subSet(from,to+"zzz"));
+        System.out.println("result 1 : "+stringSet.subSet("b","e"));
+        System.out.println("result 1 : "+stringSet.subSet(from,"dZZZZ"));
+
+
+        TreeSet set3 = new TreeSet();
+        int[] score = {80,95,50,35,45,65,10,100};
+
+        for(int i = 0; i < score.length; i++){
+            set3.add(score[i]);
+        }
+        System.out.println("50보다 작은 값 : "+set3.headSet(50));
+        System.out.println("50보다 큰 값 : "+set3.tailSet(50));
     }
     class TreeSetTest {}
 
