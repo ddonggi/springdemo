@@ -298,6 +298,7 @@ public class DataStructure {
         }
         System.out.println("50보다 작은 값 : "+set3.headSet(50));
         System.out.println("50보다 큰 값 : "+set3.tailSet(50));
+        System.out.println("40과 80 사이의 값 : "+set3.subSet(40,80));
     }
     class TreeSetTest {}
 
