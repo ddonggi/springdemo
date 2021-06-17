@@ -299,6 +299,9 @@ public class DataStructure {
         System.out.println("50보다 작은 값 : "+set3.headSet(50));
         System.out.println("50보다 큰 값 : "+set3.tailSet(50));
         System.out.println("40과 80 사이의 값 : "+set3.subSet(40,80));
+        //subset 범위검색의 결과를 반환한다
+        //headset 지정된 객체보다 작은 값의 객체들을 반환한다
+        //tailset지정된 객체보다 큰 값의 객체들을 반환한다
     }
     class TreeSetTest {}
 
