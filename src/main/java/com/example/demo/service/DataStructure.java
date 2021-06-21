@@ -243,6 +243,10 @@ public class DataStructure {
         treeSet.add(72);
 
         System.out.println("treeSet >> " + treeSet);
+        System.out.println("treeSet.ceiling input 7>> " + treeSet.ceiling(7));
+        System.out.println("treeSet.ceiling input 8>> " + treeSet.ceiling(8));
+        System.out.println("treeSet.floor 52>> " + treeSet.floor(52));
+        System.out.println("treeSet.floor 50>> " + treeSet.floor(50));
 
         //이진탐색트리(Binary search tree)로 구현.범위탐색과 정렬에 유리
         //이진트리는 모든 노드가 최대 2개의 하위 노드를 갖음
@@ -258,11 +262,12 @@ public class DataStructure {
             set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
             set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
 //        }
-
-
-
         System.out.println(set);
 
+        //first() 정렬된 순서에서 첫번째 객체를 반환한다.
+        //last() 마지막 객체 반환
+        //ceiling() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
+        //floor() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
         TreeSet stringSet = new TreeSet();
 
         String from = "b";
