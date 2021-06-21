@@ -252,9 +252,11 @@ public class DataStructure {
         //이진트리는 모든 노드가 최대 2개의 하위 노드를 갖음
         //각 요소(node)가 나무(tree)형태로 연결(linked list의 변형)
         //이진 탐색 트리 - 부모보다 작은 값은 왼쪽 큰 값은 오른쪽에 저장
-        //데이터가 많아질수록 추가, 삭제에 시간이 더 걸림(비교 횟수 증가)
+        //데이터가 많아질수록 추가, 삭제에 시간이 더 걸림(비교 횟수가 증가하기 때문)
         Set set = new TreeSet(new TestComp()); // 범위검색, 정렬. 정렬안해도 됨. HashSet은 Linked list에 담은 후 sort
 
+        //Set은 중복을 허용하지 않기때문에 add메서드 실행시 equals 와 hashCode를 호출해서 비교, 같은게 있으면 false 반환
+        //HashSet은 equals(),hashCode()를 이용해 비교하고, TreeSet은 Compare()을 호출해서 비교한다.
 //        for(int i =0; set.size() <6; i++){
 //            int num = (int)(Math.random()*45)+1;
             set.add(new TreeSetTest()); //형변환 예외 발생 !! 비교하면서 저장해야하는데 비교기준이 없기때문.
