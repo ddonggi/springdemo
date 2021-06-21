@@ -242,11 +242,31 @@ public class DataStructure {
         treeSet.add(1);
         treeSet.add(72);
 
+        //first() 정렬된 순서에서 첫번째 객체를 반환한다.
+        //last() 마지막 객체 반환
+        //ceiling() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
+        //floor() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
         System.out.println("treeSet >> " + treeSet);
         System.out.println("treeSet.ceiling input 7>> " + treeSet.ceiling(7));
         System.out.println("treeSet.ceiling input 8>> " + treeSet.ceiling(8));
         System.out.println("treeSet.floor 52>> " + treeSet.floor(52));
         System.out.println("treeSet.floor 50>> " + treeSet.floor(50));
+        //higher() 지정된 객체보다 큰 객체 반환,없으면 null
+        System.out.println("treeSet.higher 52>> " + treeSet.higher(52));
+        System.out.println("treeSet.higher 72>> " + treeSet.higher(72));
+        //lower() 지정된 객체보다 작은 객체 반환,없으면 null
+        System.out.println("treeSet.lower 2>> " + treeSet.lower(2));
+        System.out.println("treeSet.lower 1>> " + treeSet.lower(1));
+
+        //subSet(from, to) 범위검색의 결과 반환한다. to는 범위에 포함되지 않음 ( from 이상 to 미만 )
+        System.out.println("treeSet.subSet 1,52>> " + treeSet.subSet(1,52));
+        System.out.println("treeSet.subSet 1,52>> " + treeSet.subSet(1,53));
+        //headSet() 지정된 객체보다 작은값의 객체들을 반환
+        System.out.println("treeSet.headSet 52>> " + treeSet.headSet(52));
+        System.out.println("treeSet.headSet 1>> " + treeSet.headSet(1));
+        //tailSet() 지정된 객체보다 큰 객체들을 반환
+        System.out.println("treeSet.headSet 7>> " + treeSet.headSet(7));
+        System.out.println("treeSet.headSet 72>> " + treeSet.headSet(72));
 
         //이진탐색트리(Binary search tree)로 구현.범위탐색과 정렬에 유리
         //이진트리는 모든 노드가 최대 2개의 하위 노드를 갖음
@@ -266,10 +286,7 @@ public class DataStructure {
 //        }
         System.out.println(set);
 
-        //first() 정렬된 순서에서 첫번째 객체를 반환한다.
-        //last() 마지막 객체 반환
-        //ceiling() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
-        //floor() 지정된 객체와 같은 객체를 반환, 없으면 큰 값중 가장 가까운값의 객체 반환, 그것도 없으면 null
+
         TreeSet stringSet = new TreeSet();
 
         String from = "b";
