@@ -265,8 +265,8 @@ public class DataStructure {
         System.out.println("treeSet.headSet 52>> " + treeSet.headSet(52));
         System.out.println("treeSet.headSet 1>> " + treeSet.headSet(1));
         //tailSet() 지정된 객체보다 큰 객체들을 반환
-        System.out.println("treeSet.headSet 7>> " + treeSet.headSet(7));
-        System.out.println("treeSet.headSet 72>> " + treeSet.headSet(72));
+        System.out.println("treeSet.tailSet 7>> " + treeSet.tailSet(7));
+        System.out.println("treeSet.tailSet 72>> " + treeSet.tailSet(72));
 
         //이진탐색트리(Binary search tree)로 구현.범위탐색과 정렬에 유리
         //이진트리는 모든 노드가 최대 2개의 하위 노드를 갖음
