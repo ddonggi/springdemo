@@ -44,11 +44,20 @@ public class HelloController {
         dataStructure.printQueue();
         return "queue";
     }
+
+    @GetMapping("/hashmap")
+    public String hashMap(Model model){
+        model.addAttribute("data","hashmap");
+        dataStructure.printHashMap();
+        return "hashMap";
+    }
     @GetMapping("/success")
     public String success(Model model){
         System.out.println("success!!!");
         return "filtered";
     }
+
+
 
     @GetMapping("/filtered/success")
     public String filteredSuccess(Model model){
