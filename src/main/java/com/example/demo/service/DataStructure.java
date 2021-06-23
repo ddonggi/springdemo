@@ -599,7 +599,7 @@ public class DataStructure {
         //HashMap보다 데이터 추가,삭제에 시간이 더 걸린다
         //TreeSet과 비슷
         //저장은 put, 가져오기는 get
-
+        //키로 해시함수를 호출해서 해시코드를 얻는다
     }
 }
 
