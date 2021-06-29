@@ -604,7 +604,14 @@ public class DataStructure {
         //3. 링크드 리스트에서 키와 일치하는 데이터를 찾는다.
         //해시함수는 같은 키에 대해 항상 같은 해시코드를 반환해야한다.
         //서로 다른 키일지라도 같은 값의 해시코드를 반환할 수도 있다.
-        //주말까지 Collection 끝 예정
+
+        HashMap<Integer,String> map = new HashMap();
+        map.put(1,"1234");
+        map.put(3,"44444");
+        map.put(2,"12678");
+        map.put(5,"ssdfg234");
+
+        Scanner scanner = new Scanner(System.in);
     }
 }
 
