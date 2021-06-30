@@ -609,9 +609,32 @@ public class DataStructure {
         map.put(1,"1234");
         map.put(3,"44444");
         map.put(2,"12678");
+        System.out.println("map"+map);
         map.put(5,"ssdfg234");
+        System.out.println("map"+map);
 
         Scanner scanner = new Scanner(System.in);
+
+        while (true){
+            System.out.println("id와 pw를 입력하세요.");
+            System.out.println("id:");
+            String id = scanner.nextLine().trim();
+
+            System.out.println("password :");
+            String password = scanner.nextLine().trim();
+            System.out.println();
+
+            if(!map.containsKey(id)){
+                System.out.println("입력하신 id는 존재하지 않습니다. 다시 입력해 주세요.");
+                continue;
+            }
+            if(!(map.get(id).equals(password))){
+                System.out.println("비밀번호가 일치하지 않습니다.다시 입력해 주세요.");
+            }else{
+                System.out.println("비밀번호와 아이디가 일치합니다.");
+                break;
+            }//while
+        }//main
     }
 }
 
