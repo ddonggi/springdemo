@@ -613,6 +613,15 @@ public class DataStructure {
         map.put(5,"ssdfg234");
         System.out.println("map"+map);
 
+        Set set = map.entrySet();
+        Iterator it = set.iterator();
+
+        while (it.hasNext()){
+            Map.Entry e = (Map.Entry) it.next();
+            System.out.println("이름 : "+e.getKey() + ", 점수 :"+ e.getValue());
+        }
+
+
         Scanner scanner = new Scanner(System.in);
 
         while (true){
