@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class DataStructure {
 
@@ -644,6 +643,73 @@ public class DataStructure {
                 break;
             }//while
         }//main
+    }
+
+    public int calc(int[] prices, int[] discounts) {
+        List<Integer> priceList = new ArrayList<>();
+        for(int i:prices) {
+            priceList.add(i);
+        }
+        Collections.sort(priceList,Collections.reverseOrder());
+
+        List<Integer> discountsList = new ArrayList<>();
+        for(int i:discounts) {
+            discountsList.add(i);
+        }
+        Collections.sort(discountsList,Collections.reverseOrder());
+
+        Iterator priceIter = priceList.iterator();
+        Iterator discountIter = discountsList.iterator();
+
+        List<Integer> discountedList = new ArrayList<>();
+
+        while (priceIter.hasNext()&&discountIter.hasNext()){
+            int discountedPrice =  ((int)priceIter.next()*(int)discountIter.next())/100;
+            System.out.println("discountedPrice : "+discountedPrice);
+            discountedList.add(discountedPrice);
+        }
+
+        System.out.println("원래가격 : "+priceList);
+        System.out.println("할인율 : "+discountsList);
+        System.out.println("할인적용 가격 :"+discountedList);
+
+        int answer = 0;
+        for(int i =0; i<discountedList.size(); i++){
+                int finallPrice = priceList.get(i) - discountedList.get(i);
+                priceList.set(i,finallPrice);
+                System.out.println("finallPrice:"+finallPrice);
+        }
+
+        for(int price:priceList){
+            answer += price;
+        }
+                System.out.println("answer:"+answer);
+
+//        int answer = 0;
+        return answer;
+    }
+
+    public String[] calc2(String s) {
+        //끝이랑, 다음끼리 비교
+//        String prefix = s.substring(0,1);
+//        String suffix = (s.substring(s.length()));
+//        if(prefix.equals(suffix)){
+//
+//        };
+
+        String prefix = s.substring(0,1);
+        String suffix = s.substring(s.length()-1);
+
+        for(int i = 0; i<s.length(); i++){
+            if(!prefix.equals(suffix)){
+                prefix += s.substring(0,i);
+
+            }
+        }
+
+        String[] answer = {};
+
+        return answer;
     }
 }
 

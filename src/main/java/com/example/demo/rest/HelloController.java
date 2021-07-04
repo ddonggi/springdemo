@@ -51,6 +51,24 @@ public class HelloController {
         dataStructure.printHashMap();
         return "hashMap";
     }
+
+    @GetMapping("/calc")
+    public String calc(Model model){
+        model.addAttribute("data","hashmap");
+        int[] prices = {13000, 88000, 10000};
+        int[] discounts = {30, 20,10};
+        dataStructure.calc(prices,discounts);
+        return "calc";
+    }
+
+    @GetMapping("/calc2")
+    public String calc2(Model model){
+        model.addAttribute("data","hashmap");
+    String s = "abcxyasdfasdfxyabc";
+        dataStructure.calc2(s);
+        return "calc";
+    }
+
     @GetMapping("/success")
     public String success(Model model){
         System.out.println("success!!!");
