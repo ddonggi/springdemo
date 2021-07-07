@@ -32,6 +32,11 @@ public class DataStructure {
         System.out.println("Arrays.sort(array) sorted finish!!");
         System.out.println("sorted array : " + Arrays.toString(array));
 
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,6,7,8,9));
+        System.out.println("numbers : "+numbers.toString());
+        numbers.removeIf(n -> (n%3==0)); //람다식 필터링, 3의 배수이면 삭제
+        System.out.println("numbers filtered: "+numbers.toString());
+
     }
 
     public void printLinkedList() {
