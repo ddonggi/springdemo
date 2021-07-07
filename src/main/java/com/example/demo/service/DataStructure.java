@@ -642,6 +642,11 @@ public class DataStructure {
                 System.out.println("비밀번호와 아이디가 일치합니다.");
                 break;
             }//while
+
+            HashMap hashMap = new HashMap();
+            hashMap.put("김자바",90);
+
+
         }//main
     }
 
