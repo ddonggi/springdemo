@@ -650,7 +650,19 @@ public class DataStructure {
 
             HashMap hashMap = new HashMap();
             hashMap.put("김자바",90);
+            hashMap.put("김자바",100);
+            hashMap.put("리자바",100);
+            hashMap.put("강자바",80);
+            hashMap.put("최자바",90);
+            hashMap.put("쟤자바",60);
 
+            Set entrySet = hashMap.entrySet();
+            Iterator iter = entrySet.iterator();
+
+            while(iter.hasNext()){
+                Map.Entry e = (Map.Entry) iter.next();
+                System.out.println("이름: "+e.getKey()+",점수: "+e.getValue());
+            }
 
         }//main
     }
