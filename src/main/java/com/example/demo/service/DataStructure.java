@@ -656,12 +656,25 @@ public class DataStructure {
             hashMap.put("최자바",90);
             hashMap.put("쟤자바",60);
 
-            Set entrySet = hashMap.entrySet();
-            Iterator iter = entrySet.iterator();
+            Set set2 = hashMap.entrySet();
+            Iterator iter = set2.iterator();
 
             while(iter.hasNext()){
                 Map.Entry e = (Map.Entry) iter.next();
                 System.out.println("이름: "+e.getKey()+",점수: "+e.getValue());
+            }
+
+            set2 = hashMap.keySet();
+            System.out.println("참가자 명단 :"+set2);
+
+            Collection values = hashMap.values();
+            iter = values.iterator();
+
+            int total = 0;
+
+            while (iter.hasNext()){
+                Integer i = (Integer) iter.next();
+                total+=i;
             }
 
         }//main
