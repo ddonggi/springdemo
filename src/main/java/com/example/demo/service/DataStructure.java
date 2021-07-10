@@ -676,6 +676,10 @@ public class DataStructure {
                 Integer i = (Integer) iter.next();
                 total+=i;
             }
+            System.out.println("총점:"+total);
+            System.out.println("평균:"+(float)total/set.size());
+            System.out.println("최고점:"+Collections.max(values));
+            System.out.println("최저점:"+Collections.min(values));
 
         }//main
     }
