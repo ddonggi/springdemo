@@ -687,11 +687,11 @@ public class DataStructure {
 
             for(int i =0; i<data.length; i++){
                 if(map2.containsKey(data[i])){
-                    int value = (int)map.get(data[i]);
-                    map.put(data[i],value+1);
+                    int value = (int)map2.get(data[i]);
+                    map2.put(data[i],value+1);
                 }
                 else{
-                    map.put(data[i],1);
+                    map2.put(data[i],1);
                 }
             }
 
