@@ -694,6 +694,10 @@ public class DataStructure {
                     map2.put(data[i],1);
                 }
             }
+            Iterator iter2 = map2.entrySet().iterator();
+            while (iter2.hasNext()){
+
+            }
 
         }//main
     }
