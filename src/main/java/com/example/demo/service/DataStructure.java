@@ -696,7 +696,10 @@ public class DataStructure {
             }
             Iterator iter2 = map2.entrySet().iterator();
             while (iter2.hasNext()){
-
+                Map.Entry entry = (Map.Entry) iter2.next();
+                int value = (int)entry.getValue();
+                System.out.println(entry.getKey() + ":"
+                + printtBar("#",value)+" "+value);
             }
 
         }//main
