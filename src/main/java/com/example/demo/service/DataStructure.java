@@ -699,7 +699,7 @@ public class DataStructure {
                 Map.Entry entry = (Map.Entry) iter2.next();
                 int value = (int)entry.getValue();
                 System.out.println(entry.getKey() + ":"
-                + printtBar("#",value)+" "+value);
+                + printBar("#",value)+" "+value);
             }
 
         }//main
