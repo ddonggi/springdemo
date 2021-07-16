@@ -702,8 +702,10 @@ public class DataStructure {
                 + printBar("#",value)+" "+value);
             }
 
-        }//main
+        }
     }
+    //지네릭스란?
+    //컴파일시 타입을 체크해주는 기능
 
     public int calc(int[] prices, int[] discounts) {
         List<Integer> priceList = new ArrayList<>();
