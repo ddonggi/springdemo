@@ -704,8 +704,11 @@ public class DataStructure {
 
         }
     }
-    //지네릭스란?
-    //컴파일시 타입을 체크해주는 기능
+    /*지네릭스란?
+    컴파일시 타입을 체크해주는 기능
+   ArrayList<Tv> tvList = new ArrayList<Tv>(); ->TV 객체만 저장할 수 있는 ArrayList
+
+    */
 
     public int calc(int[] prices, int[] discounts) {
         List<Integer> priceList = new ArrayList<>();
