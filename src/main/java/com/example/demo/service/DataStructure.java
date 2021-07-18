@@ -707,6 +707,10 @@ public class DataStructure {
     /*지네릭스란?
     컴파일시 타입을 체크해주는 기능
    ArrayList<Tv> tvList = new ArrayList<Tv>(); ->TV 객체만 저장할 수 있는 ArrayList
+   지네릭스가 있기 전에는 Tv 말고 다른걸 넣어도 잡아낼 방법이 없었다.
+
+    tvList.add(new Tv()); ok
+    tvList.add(new Audio()); // 컴파일 에러, Tv 외에 다른 타입은 저장 불가
 
     */
 
