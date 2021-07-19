@@ -712,6 +712,12 @@ public class DataStructure {
     tvList.add(new Tv()); ok
     tvList.add(new Audio()); // 컴파일 에러, Tv 외에 다른 타입은 저장 불가
 
+    ArrayList list = new ArrayList();
+    list.add(10);
+    list.add(20);
+    list.add("30");
+
+    Integer i = (Integer)list.get(2); // 컴파일 ok
     */
 
     public int calc(int[] prices, int[] discounts) {
