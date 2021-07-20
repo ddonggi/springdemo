@@ -718,6 +718,8 @@ public class DataStructure {
     list.add("30");
 
     Integer i = (Integer)list.get(2); // 컴파일 ok
+
+    System.out.println(list);
     */
 
     public int calc(int[] prices, int[] discounts) {
