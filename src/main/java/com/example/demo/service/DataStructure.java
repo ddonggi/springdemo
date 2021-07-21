@@ -718,6 +718,7 @@ public class DataStructure {
     list.add("30");
 
     Integer i = (Integer)list.get(2); // 컴파일 ok
+    String i = (String)list.get(2); //형변환 생략 가능
 
     System.out.println(list);
     */
