@@ -715,11 +715,12 @@ public class DataStructure {
     ArrayList list = new ArrayList();
     list.add(10);
     list.add(20);
-    list.add("30");
+    list.add("30"); //String을 넣음
 
     Integer i = (Integer)list.get(2); // 컴파일 ok
     String i = (String)list.get(2); //형변환 생략 가능
 
+//실행시 에러가 나는거 보단 컴파일시 에러나는것이 더 낫다
     System.out.println(list);
     */
 
