@@ -720,7 +720,7 @@ public class DataStructure {
     Integer i = (Integer)list.get(2);
     //컴파일 에러 없음 why? Object 타입으로 반환하기 때문에, Integer 로 형변환이 가능하다
     하지만 실행을 시키면 실제로 들어있는것은 String 이기 때문에 ClassCastException 이 발생
-
+//
 
     String i = (String)list.get(2); //형변환 생략 가능
 
