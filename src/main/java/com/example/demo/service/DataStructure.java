@@ -725,6 +725,7 @@ public class DataStructure {
     String i = (String)list.get(2); //형변환 생략 가능
 
 //실행시 에러가 나는거 보단 컴파일시 에러나는것이 더 낫다
+//지네릭스를 쓰게 되면 실행시 발생하는 에러를 컴파일시 잡아준다.
     System.out.println(list);
     */
 
