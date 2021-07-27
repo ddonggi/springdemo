@@ -729,6 +729,7 @@ public class DataStructure {
 //그리고 꺼낼때는 원래 반환하는 타입이 Object 타입이라서 형변환을 해줬어야하는데, 형변환을 생략 할 수 있다.
     System.out.println(list);
     지네릭스 덕분에 타입체크가 강화됨
+    지네릭스 도입 이후에는 타입 체크를 해주는 것이 좋다
     */
 
     public int calc(int[] prices, int[] discounts) {
