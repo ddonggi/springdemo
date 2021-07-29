@@ -730,7 +730,22 @@ public class DataStructure {
     System.out.println(list);
     지네릭스 덕분에 타입체크가 강화됨
     지네릭스 도입 이후에는 타입 체크를 해주는 것이 좋다
+
+
+   */
+
+//12.2-----------------타입 변수 -----------------
+    /*
+    * 클래스를 작성할 때, Object 타입 대신 타입변수(E)를 선언해서 사용
+    * 일반클래스였던 클래스들이 지네릭클래스로 바뀐 클래스들이 있다. ( Object 클래스를 포함한 클래스들 )
+    * 기본적으로 T(Type) 나 E(Element) 를 많이 쓴다
+    *
+    *
+    *객체를 생성시, 타입변수E 대신 실제 타입을 지정(대입)해줘야한다
+    * ArrayList<Tv> tvList = new ArrayList<Tv>();
+    * 참조변수, 생성자 의 타입변수 일치해야한다
     */
+
 
     public int calc(int[] prices, int[] discounts) {
         List<Integer> priceList = new ArrayList<>();
