@@ -730,7 +730,7 @@ public class DataStructure {
     System.out.println(list);
     지네릭스 덕분에 타입체크가 강화됨
     지네릭스 도입 이후에는 타입 체크를 해주는 것이 좋다
-
+    타입변수 대신 실제 타입을 지정하면, 형변환 생략 가능하다.
 
    */
 
