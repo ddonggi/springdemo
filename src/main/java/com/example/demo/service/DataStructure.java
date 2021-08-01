@@ -744,6 +744,7 @@ public class DataStructure {
     *객체를 생성시, 타입변수E 대신 실제 타입을 지정(대입)해줘야한다
     * ArrayList<Tv> tvList = new ArrayList<Tv>();
     * 참조변수, 생성자 의 타입변수 일치해야한다
+    * 지네릭 클래스간의 다형성은 성립(여전히 대입된 타입은 일치해야 한다.)
     */
 
 
