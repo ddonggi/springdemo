@@ -745,6 +745,7 @@ public class DataStructure {
     * ArrayList<Tv> tvList = new ArrayList<Tv>();
     * 참조변수, 생성자 의 타입변수 일치해야한다
     * 지네릭 클래스간의 다형성은 성립(여전히 대입된 타입은 일치해야 한다.)
+    *
     */
 
 
